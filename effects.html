@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Effects Dashboard</title>
+<link rel="stylesheet" href="styleo.css">
+
+<script src="jquery-4.0.0.min.js"></script>
+
+
+
+<script>
+
+$(document).ready(function(){
+
+$("#showBtn").click(function(){
+$("#card1").show();
+});
+
+$("#hideBtn").click(function(){
+$("#card1").hide();
+});
+
+$("#toggleBtn").click(function(){
+$("#card1").toggle();
+});
+
+
+$("#fadeInBtn").click(function(){
+$("#card2").fadeIn();
+});
+
+$("#fadeOutBtn").click(function(){
+$("#card2").fadeOut();
+});
+
+$("#fadeToggleBtn").click(function(){
+$("#card2").fadeToggle();
+});
+
+$("#fadeToBtn").click(function(){
+$("#card2").fadeTo(1000,0.3);
+});
+
+
+
+$("#slideDownBtn").click(function(){
+$("#card3").slideDown();
+});
+
+$("#slideUpBtn").click(function(){
+$("#card3").slideUp();
+});
+
+$("#slideToggleBtn").click(function(){
+$("#card3").slideToggle();
+});
+
+});
+
+</script>
+
+</head>
+
+<body>
+
+<h2>jQuery Effects Control Panel</h2>
+
+<div class="container">
+
+<div class="card" id="card1">
+<h4>Profile</h4>
+<p>Basic Effects</p>
+</div>
+
+<div class="card" id="card2">
+<h4>Gallery</h4>
+<p>Fade Effects</p>
+</div>
+
+<div class="card" id="card3">
+<h4>Messages</h4>
+<p>Slide Effects</p>
+</div>
+
+</div>
+
+
+<div class="controls">
+
+<h3>Basic Effects</h3>
+<button id="showBtn">Show</button>
+<button id="hideBtn">Hide</button>
+<button id="toggleBtn">Toggle</button>
+
+<h3>Fade Effects</h3>
+<button id="fadeInBtn">Fade In</button>
+<button id="fadeOutBtn">Fade Out</button>
+<button id="fadeToggleBtn">Fade Toggle</button>
+<button id="fadeToBtn">Fade To (30%)</button>
+
+<h3>Slide Effects</h3>
+<button id="slideDownBtn">Slide Down</button>
+<button id="slideUpBtn">Slide Up</button>
+<button id="slideToggleBtn">Slide Toggle</button>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM Traversing Example</title>
+<link rel="stylesheet" href="styles.css">
+
+<script src="jquery-4.0.0.min.js"></script>
+
+
+<script>
+$(document).ready(function(){
+
+
+$("#showParent").click(function(){
+$("#child1").parent().addClass("active");
+});
+
+$("#showParents").click(function(){
+$("#child1").parents().addClass("active");
+});
+
+
+$("#showChildren").click(function(){
+$("#family").children().addClass("active");
+});
+
+$("#findMember").click(function(){
+$("#family").find(".member").addClass("active");
+});
+
+
+$("#showSiblings").click(function(){
+$("#child1").siblings().addClass("active");
+});
+
+$("#nextMember").click(function(){
+$("#child1").next().addClass("active");
+});
+
+$("#prevMember").click(function(){
+$("#child2").prev().addClass("active");
+});
+
+
+$("#firstMember").click(function(){
+$(".member").first().addClass("active");
+});
+
+$("#lastMember").click(function(){
+$(".member").last().addClass("active");
+});
+
+$("#eqMember").click(function(){
+$(".member").eq(1).addClass("active");
+});
+
+$("#filterMember").click(function(){
+$(".member").filter(".special").addClass("active");
+});
+
+$("#notMember").click(function(){
+$(".members").not(".special").addClass("active");
+});
+
+});
+</script>
+
+</head>
+
+<body>
+
+<h2>Family Structure</h2>
+
+<div id="family" class="box">
+
+<div id="parent1" class="box">
+Parent 1
+
+<div id="child1" class="box members">Child 1</div>
+<div id="child2" class="box member special">Child 2</div>
+<div id="child3" class="box member">Child 3</div>
+
+</div>
+
+</div>
+
+<h3>Parent Traversal</h3>
+
+<button id="showParent">parent</button>
+<button id="showParents">parents</button>
+
+<h3>Children Traversal</h3>
+
+<button id="showChildren">children</button>
+<button id="findMember">find</button>
+
+<h3>Sibling Traversal</h3>
+
+<button id="showSiblings">siblings</button>
+<button id="nextMember">next</button>
+<button id="prevMember">prev</button>
+
+<h3>Filtering</h3>
+
+<button id="firstMember">first</button>
+<button id="lastMember">last</button>
+<button id="eqMember">eq</button>
+<button id="filterMember">filter</button>
+<button id="notMember">not</button>
+
+</body>
+</html>
