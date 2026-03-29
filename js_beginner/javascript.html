@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Website</title>
+</head>
+<body>
+    <h1 id="title">Welcome to My Startup</h1>
+    <p id="demo">This is a sample paragraph.</p>
+    <br>
+    <form onsubmit="submitform(event)">
+    <input type="text" id="username" placeholder="Enter name"><br>
+    <input type="number" id="age" placeholder="Enter age"><br>
+    <button type="submit">Submit</button><br><br>
+</form>
+    <button onclick="changetext()">Change Text</button>
+    <button onclick="togglestyle()">Toggle Style</button>
+    <button onclick="askname()">Enter Name</button>
+    <button onclick="printpage()">Print Page</button>
+    <script>
+        var company="My Startup";
+        let founder="Prasanna";
+        const year=2025;
+        console.log("Startup Name: " , company , ", Founder: " , founder , ", Year: " , year);
+        function add(a,b){
+            return a+b;
+        }
+        const subtract=(a,b)=>a-b;  //arrow function
+        console.log("addition:",add(5,3));
+        console.log("subtraction:",subtract(5,3));
+
+        alert("welcome to " + company);
+        function changetext(){
+            document.getElementById("demo").innerHTML="text changed successfully";
+        }
+        let isstyled=false;
+        function togglestyle(){
+            let element=document.getElementById("demo");
+            if(!isstyled){
+                element.style.color="white";
+                element.style.backgroundColor="black";
+                element.style.fontSize="20px";
+                isstyled=true;
+            }else{
+                element.style.color="black";
+                element.style.backgroundColor="white";
+                element.style.fontSize="16px";
+                isstyled=false;
+            }
+        }
+        function submitform(event){
+            event.preventDefault();
+            console.log("form submitted");
+            alert("Form submitted successfully");
+        }
+
+        document.getElementById("title").onmouseover = function() {
+            this.style.color = "red";
+        };
+
+        document.getElementById("title").onmouseout = function() {
+            this.style.color = "black";
+        };
+
+        function askname() {
+            let name = prompt("Enter your name:");
+            if (name) {
+                document.getElementById("demo").innerHTML = "Hello " + name + " 👋 Welcome!";
+            }
+        }
+
+        function printpage() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
