@@ -1,50 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="jquery-4.0.0.min.js"></script>
-    <script>
-        $(document).ready(function(){
-
-            $("#colorBtn").click(function(){
-                $("#text").css("color","blue");
-            });
-
-            $("#addBtn").click(function(){
-                $("#text").addClass("highlight");
-            });
-
-            $("#removeBtn").click(function(){
-                $("#text").removeClass("highlight");
-            });
-
-
-            $("#toggleBtn").click(function(){
-                $("body").toggleClass("darkTheme");
-            });
-
-
-            $("#checkBtn").click(function(){
-                if($("#text").hasClass("highlight")){
-                    alert("Highlight class is applied");
-                }else{
-                    alert("Highlight class is NOT applied");
-                }
-            });
-
-});
-</script>
+<title>Style</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="styles.css">
+<style>
+.dark{
+background:black;
+color:white;
+}
+</style>
 </head>
 <body>
-    <h2 id="text">jQuery Style</h2>
 
-<button id="colorBtn">Change Color</button> <br> <br>
-<button id="addBtn">Add Highlight</button> <br> <br>
-<button id="removeBtn">Remove Highlight</button> <br> <br>
-<button id="toggleBtn">Toggle Theme</button> <br> <br>
-<button id="checkBtn">Check Highlight</button><br>  <br>
+<h2 id="text">Theme Changer</h2>
+
+<button id="toggle">Toggle Theme</button>
+
+<script>
+$("#toggle").click(function(){
+$("body").toggleClass("dark");
+});
+</script>
+
 </body>
 </html>
