@@ -1,0 +1,6 @@
+/vendor/
+/mongodb/vendor/
+.env
+.idea/
+.vscode/
+*.log
